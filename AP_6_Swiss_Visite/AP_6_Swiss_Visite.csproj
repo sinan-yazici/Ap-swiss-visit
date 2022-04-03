@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93CF3C0A-4A57-4E45-B9D4-10CC709D903E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AP_6_Swiss_Visite</RootNamespace>
+    <AssemblyName>AP_6_Swiss_Visite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjoutMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutMedicament.Designer.cs">
+      <DependentUpon>AjoutMedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutWorkflow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutWorkflow.Designer.cs">
+      <DependentUpon>AjoutWorkflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BD.cs" />
+    <Compile Include="Decision.cs" />
+    <Compile Include="Etape.cs" />
+    <Compile Include="EtapeNormee.cs" />
+    <Compile Include="Famille.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Decision_Etape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Decision_Etape.Designer.cs">
+      <DependentUpon>frm_Decision_Etape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_EtapeNorme_maj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EtapeNorme_maj.Designer.cs">
+      <DependentUpon>frm_EtapeNorme_maj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_medicaments_parFamille.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_medicaments_parFamille.Designer.cs">
+      <DependentUpon>frm_medicaments_parFamille.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globale.cs" />
+    <Compile Include="Medicament.cs" />
+    <Compile Include="MedicamentEnCoursDeValidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicamentEnCoursDeValidation.Designer.cs">
+      <DependentUpon>MedicamentEnCoursDeValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow.cs" />
+    <EmbeddedResource Include="AjoutMedicament.resx">
+      <DependentUpon>AjoutMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutWorkflow.resx">
+      <DependentUpon>AjoutWorkflow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Decision_Etape.resx">
+      <DependentUpon>frm_Decision_Etape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_EtapeNorme_maj.resx">
+      <DependentUpon>frm_EtapeNorme_maj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_medicaments_parFamille.resx">
+      <DependentUpon>frm_medicaments_parFamille.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicamentEnCoursDeValidation.resx">
+      <DependentUpon>MedicamentEnCoursDeValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
